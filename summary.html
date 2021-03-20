@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>summary</title>
+     
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   </head>
+
+   <body>
+      <h1>Thank you for your order! </h1>
+      <div>
+         <p id="time_taken"></p>
+         <p id="amount">total</p>
+      </div>
+
+      <script>
+         var order_time = localStorage["time"];
+         var total_cost = localStorage["total"];  
+
+         $("#time_taken").html("Order time: " + order_time);
+         $("#amount").html("Total Cost: $" + total_cost);
+
+         localStorage.clear();
+
+      </script>
+   </body>
+
+</html>
